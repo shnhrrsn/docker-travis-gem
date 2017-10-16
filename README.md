@@ -7,7 +7,7 @@ Travis gem in Docker
 ### Setting up an alias
 
 ```
-alias travis='docker run --rm zburgermeiszter/docker-travis-gem:1.0.0'
+alias travis='docker run --rm -ti -v "`pwd`:/wd" -v "$HOME/.travis:/config" -w /wd shnhrrsn/travis-gem'
 ```
 
 ### Generate Travis secrets in Docker
